@@ -1,0 +1,12 @@
+---
+# Executado pelo cPanel (Git Version Control > Deploy HEAD Commit).
+# Copia os arquivos do repositório para a pasta do site.
+# NÃO toca em config/conexao.php nem em assets/logo.* do servidor.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/kits/public
+    - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/config $DEPLOYPATH/sql
+    - /bin/cp api.php index.php kits.php anuncios.php historico.php usuarios.php login.php sair.php .htaccess $DEPLOYPATH/
+    - /bin/cp assets/style.css $DEPLOYPATH/assets/
+    - /bin/cp config/auth.php config/navbar.php config/conexao.exemplo.php $DEPLOYPATH/config/
+    - /bin/cp sql/*.sql $DEPLOYPATH/sql/

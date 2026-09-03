@@ -1,0 +1,17 @@
+# Controle de Kits — regras para Apache (HostGator)
+
+# Página inicial = tela de vendas
+DirectoryIndex index.php
+
+# Bloqueia listagem de diretórios
+Options -Indexes
+
+# Protege a pasta de configuração (credenciais do banco)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^config/ - [F,L]
+  RewriteRule ^sql/ - [F,L]
+</IfModule>
+
+# Charset padrão
+AddDefaultCharset UTF-8

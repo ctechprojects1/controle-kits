@@ -1,0 +1,14 @@
+# Credenciais do banco — cada ambiente tem o seu (use conexao.exemplo.php como base)
+config/conexao.php
+
+# Logo é enviada direto no servidor, não versionada
+assets/logo.png
+assets/logo.svg
+assets/logo.webp
+assets/logo.jpg
+
+# Diagnóstico temporário
+teste-conexao.php
+
+# Zips de deploy antigos
+*.zip
